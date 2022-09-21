@@ -1,76 +1,60 @@
-Assignment 1:
-
-
+#Assignment 1:
 
 # List
 
-list= ["Hello",True,'How',69]
-print(list[1])
-list.append("Are")
-list.insert(5,"You")
+list = ["TeachNook",5,True,3.4]
 print(list)
-list.remove(True)
-list.pop(2)
+list.append("September")
+list.insert(5,"Data Science")
+list.remove(3.4)
 print(list)
 
-  OUTPUT=
-  True
-  ['Hello', True, 'How', 69, 'Are', 'You']
-  ['Hello', 'How', 'Are', 'You']
-
+> ['TeachNook', 5, True, 3.4]
+  ['TeachNook', 5, True, 'September', 'Data Science']
 
   
-#Tuple
-tuple=("hii","everyone",344,False)
-tup=(1,4,754,"Google")
-print(tuple+tup)
-  
-  OUTPUT:
-  ('hii', 'everyone', 344, False, 1, 4, 754, 'Google')
+# Tuple
 
-  
-#Dict
+tuple1=("TeachNook",5,True,3.4)
+tuple2=("Good",10,7.5,False)
+print(tuple1+tuple2)
 
-dict={
-    "Memory":["Sad","Happy"],
-    "Excitement":"High",
-    "Rating": 10,
-    "Status":True,
-    "Brain":"Improving"
-}
-print(dict["Memory"][1])
-dict["Impression"]="Good"
+> ('TeachNook', 5, True, 3.4, 'Good', 10, 7.5, False)
+
+
+# Dict
+
+dict={"name":"Abc", "age":16, "Student":True, "Count":4}
 print(dict)
-dict["Excitement"]="LOW"
-print(dict["Excitement"])
+dict["name"]="Jake"
+dict["Place"]="New York"
+dict.pop("Count")
+print(dict)
+
+> {'name': 'Abc', 'age': 16, 'Student': True, 'Count': 4}
+  {'name': 'Jake', 'age': 16, 'Student': True, 'Place': 'New York'}  
   
-  OUTPUT:
-  Happy
-  {'Memory': ['Sad', 'Happy'], 'Excitement': 'High', 'Rating': 10, 'Status': True, 'Brain': 'Improving', 'Impression': 'Good'}
-  LOW
 
-a="Impersonating The One"
-print(a[:])
+# Slicing
 
-print(a[:13:-2])
-#the negative step forced the string to be indexed 
-#from the right side starting from 0.
-
-  OUTPUT:
-  Impersonating The One
-  eOeTgi
-
-
-
-
-ASSIGNMENT 2:
-
-"""Frozen set is just an immutable version of a Python set object. 
-While elements of a set can be modified at any time, 
-elements of the frozen set remain the same after creation. """
-
-
-
-mylist = {'apple', 'banana', 'cherry'}
-x = frozenset(mylist)
+x = "I am going to slice this sentence in python"
 print(x)
+print (x[0:10])
+print (x[-15:-1])
+print (x[3:20:2])
+
+> I am going to slice this sentence in python
+  I am going
+  tence in pytho
+  mgigt lc 
+
+
+
+# ASSIGNMENT 2:
+
+# Frozen set
+
+x = frozenset(['a','b','c'])
+print(x)
+
+> frozenset({'a', 'c', 'b'})
