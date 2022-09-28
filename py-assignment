@@ -1,4 +1,4 @@
-#Assignment 1:
+#ASSIGNMENT 1:
 
 # List
 
@@ -58,3 +58,77 @@ x = frozenset(['a','b','c'])
 print(x)
 
 > frozenset({'a', 'c', 'b'})
+
+
+
+# ASSIGNMENT 3:
+# File manipulation
+"""
+a+ = Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. 
+     If the file does not exist, it creates a new file for reading and writing.
+     Ex - with open('file.txt', 'a+') as f:
+            f.seek(0)                       
+            lines = f.readlines()           
+            f.write("\n" + str(len(lines))) 
+            
+
+w+ = Opens a file for both writing and reading. Overwrites the existing file if the file exists. 
+     If the file does not exist, it creates a new file for reading and writing.
+     Ex - with open('file.txt', 'w+') as f:   
+            f.write("test 1\n")
+            f.write("test 2\n")
+            f.seek(0)                       
+            lines = f.read()                
+            print(lines)  
+     
+     
+r+ = Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
+     Ex - with open('file.txt', 'r+') as f:
+            f.write("new line \n")
+"""
+
+
+
+#ASSIGNMENT 4:
+#CALCULATOR
+
+myfile = open('results.txt', 'w')    #Use 'a' to avoid replacing old result when new result is entered.
+
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+select = input("Enter choice(1/2/3/4): ")
+
+if select in ('1', '2', '3', '4'):
+    x = float(input("Enter first number: "))
+    y = float(input("Enter second number: "))
+    if select == '1':
+        c=x+y
+        result = str(x) + "+" + str(y) + "="+str(c)+"\n"
+        myfile.write(result)
+        print(result)
+        
+
+    elif select == '2':
+        c= x-y
+        result = str(x) + "-" + str(y) + "="+str(c)+"\n"
+        myfile.write(result)
+        print(result)
+
+    elif select == '3':
+        c=x*y
+        result = str(x) + "*" + str(y) + "="+str(c)+"\n"
+        myfile.write(result)
+        print(result)
+
+    elif select == '4':
+        c= x/y
+        result = str(x) + "/" + str(y) + "="+str(c)+"\n"
+        myfile.write(result)
+        print(result)
+    else:
+        print("Please enter a valid option\n")
+
+myfile.close()
